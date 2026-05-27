@@ -133,7 +133,7 @@ El resultado exitoso de la práctica se valida al comprobar el aislamiento del c
 > "Server is up and running"
 
 
-![Interfaz de la aplicación web cargada con éxito a través del puerto 8080 local respondiendo de forma correcta.](image_32ba62.png)
+![Interfaz de la aplicación web cargada con éxito a través del puerto 8080 local respondiendo de forma correcta.](interfaz.png)
 
 
 # 10. Bibliografía
