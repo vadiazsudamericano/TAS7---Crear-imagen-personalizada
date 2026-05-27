@@ -76,7 +76,7 @@ Set-Location "$HOME\Desktop\Practica-TAS7\suda-frontend-s6"
 New-Item -ItemType File -Name "Dockerfile"
 ```
 
-![Creación del archivo Dockerfile]()
+![Creación del archivo Dockerfile](creacion_dockerfile.png)
 
 
 ## Paso 2: Configuración e inicialización del motor Docker y WSL2
