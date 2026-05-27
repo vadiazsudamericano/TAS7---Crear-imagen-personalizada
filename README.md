@@ -3,12 +3,12 @@
 ## 1. Título
 **Generar una imagen Docker a partir de una aplicación React disponible en el siguiente repositorio**
 
----
+
 
 ## 2. Tiempo de duración
 120 minutos.
 
----
+
 
 ## 3. Fundamentos
 
@@ -22,7 +22,7 @@ La plataforma Docker se ha consolidado como el estándar de la industria para la
 
 En el desarrollo de aplicaciones modernas del lado del cliente (como las *Single Page Applications* construidas con React), Docker resuelve el clásico problema de “en mi máquina sí funciona”. Al encapsular la versión exacta del entorno de ejecución (Node.js Alpine) dentro de la imagen, se garantiza un comportamiento idéntico del software tanto en el entorno de desarrollo local del estudiante como en los servidores de producción o evaluación del docente.
 
----
+
 
 ## 4. Conocimientos previos
 
@@ -33,7 +33,7 @@ Para realizar esta práctica de forma exitosa, el estudiante necesita tener clar
 - **Fundamentos de redes e infraestructura:** Comprensión de la arquitectura Cliente-Servidor, direccionamiento IP local (`localhost`) y mapeo/redireccionamiento de puertos de red (`-p puerto_host:puerto_contenedor`).
 - **Estructura de proyectos JavaScript:** Familiaridad con el gestor de paquetes de Node (`npm`), archivos de configuración `package.json` y los scripts de inicialización de entornos SPA.
 
----
+
 
 ## 5. Objetivos a alcanzar
 
@@ -42,7 +42,7 @@ Para realizar esta práctica de forma exitosa, el estudiante necesita tener clar
 - Construir imágenes personalizadas de Docker de forma local a partir del contexto de un repositorio clonado.
 - Desplegar un contenedor web accesible desde el navegador del sistema anfitrión mediante el correcto direccionamiento y mapeo de puertos.
 
----
+
 
 ## 6. Equipo necesario
 
@@ -52,7 +52,7 @@ Para realizar esta práctica de forma exitosa, el estudiante necesita tener clar
 - Terminal de comandos Windows PowerShell.
 - Navegador web moderno (Google Chrome / Microsoft Edge).
 
----
+
 
 ## 7. Material de apoyo
 
@@ -63,7 +63,7 @@ Para realizar esta práctica de forma exitosa, el estudiante necesita tener clar
 - Repositorio público de la API de simulación:
   `https://github.com/Daviddotcoms/mockAPI`
 
----
+
 
 # 8. Procedimiento
 
@@ -76,10 +76,8 @@ Set-Location "$HOME\Desktop\Practica-TAS7\suda-frontend-s6"
 New-Item -ItemType File -Name "Dockerfile"
 ```
 
-**Figura 1-1.** Creación del archivo Dockerfile vacío en el directorio raíz del proyecto mediante la terminal PowerShell.  
-*(Anexar imagen: image_32ba62.png)*
+![Creación del archivo Dockerfile]()
 
----
 
 ## Paso 2: Configuración e inicialización del motor Docker y WSL2
 
@@ -89,10 +87,7 @@ Se procedió con la instalación de Docker Desktop ejecutando el instalador con 
 wsl --update
 ```
 
-**Figura 1-2.** Proceso de actualización y configuración exitosa de los componentes de Windows Subsystem for Linux (WSL).  
-*(Anexar imagen: image_75893e.png)*
-
----
+![](subsistemalinux.pnh)
 
 ## Paso 3: Declaración de instrucciones en el Dockerfile
 
@@ -110,7 +105,6 @@ CMD ["npm", "start"]
 '@
 ```
 
----
 
 ## Paso 4: Construcción de la imagen personalizada
 
@@ -120,10 +114,8 @@ Con el motor de Docker Desktop en estado activo (*Engine Running*), se ejecutó 
 docker build -t suda-frontend:v1 .
 ```
 
-**Figura 1-3.** Proceso de construcción de la imagen y descarga de dependencias del proyecto React dentro del ciclo de Docker.  
-*(Anexar imagen: image_75e63e.png)*
+![Proceso construccion archivo Docker](procesoconstruccion.png)
 
----
 
 ## Paso 5: Despliegue del contenedor web
 
@@ -133,7 +125,6 @@ Una vez finalizada la construcción de la imagen sin errores, se inicializó el 
 docker run -d --name app-frontend-contenedor -p 8080:3000 suda-frontend:v1
 ```
 
----
 
 # 9. Resultados esperados
 
@@ -141,10 +132,9 @@ El resultado exitoso de la práctica se valida al comprobar el aislamiento del c
 
 > "Server is up and running"
 
-**Figura 1-4.** Interfaz de la aplicación web cargada con éxito a través del puerto 8080 local respondiendo de forma correcta.  
-*(Anexar imagen: image_75fa1f.png)*
 
----
+![Interfaz de la aplicación web cargada con éxito a través del puerto 8080 local respondiendo de forma correcta.](image_32ba62.png)
+
 
 # 10. Bibliografía
 
